@@ -93,21 +93,23 @@ const Skeleton = styled('div')<{ height: number }>(({ theme, height }) => ({
   content: '" "',
 }));
 
-export default function DashboardLayoutBasic(props: unknown) {
+
+
+export default function DashboardLayoutBasic() {
    
-  const { window } = props;
+//   const { window } = props;
 
   const router = useDemoRouter('/dashboard');
 
   // Remove this const when copying and pasting into your project.
-  const demoWindow = window ? window() : undefined;
+//   const demoWindow = window()
 
   return (
     <AppProvider
       navigation={NAVIGATION}
       router={router}
       theme={demoTheme}
-      window={demoWindow}
+    //   window={demoWindow}
     >
       <DashboardLayout>
         <PageContainer>
